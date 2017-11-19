@@ -61,7 +61,8 @@
   "mongodb": ">=3.0.6",
   "main": "bin/www",
   "scripts": {
-    "start": "node ./bin/www"
+    "dev": "node ./bin/www -p 3010",
+    "start": "nohup node ./bin/www -p 3010 > start.log 2>&1 &"
   },
   "bugs": {
     "url": "https://github.com/welkinwong/nodercms/issues"

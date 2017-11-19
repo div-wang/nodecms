@@ -80,4 +80,17 @@ async.waterfall([
 
     logger.system().info('正在监听 ' + bind);
   });
+  // 配置https服务
+  var fs = require('fs');
+  var privateKey = fs.readFileSync('../feed/ssl/div.key.unsec', 'utf8');
+  var certificate = fs.readFileSync('../feed/ssl/div.crt', 'utf8');
+  var credentials = {
+      "key": privateKey,
+      "cert": certificate
+  };
+  var https = require('https');
+  var httpsServer = https.createServer(credentials, app);
+  // 监听端口
+  httpsServer.listen(port + 1)
+  logger.system().info('正在监听 ' + (port + 1));
 });

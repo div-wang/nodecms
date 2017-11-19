@@ -1,57 +1,267 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-9">
-      <div class="row">
-        {{#foreach lists}}
-          <div class="col-md-6">
-            <div class="panel panel-less">
-              <div class="panel-heading">
-                {{name}}
-                <a class="pull-right" href="{{path}}">更多</a>
-              </div>
-              <div class="list-group list-group-less">
-                {{#foreach contents limit="5"}}
-                  <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
-                {{/foreach}}
-              </div>
+<div class="slider">
+  <div class="callbacks_container">
+    <ul class="rslides" id="slider">
+    {{#features 'banner'}}
+      <li>
+        <div class="w3layouts-banner-top w3layouts-banner-top1" style="background: url({{thumbnail.src}}) no-repeat 0px 0px;">
+          <div class="container">
+            <div class="slider-info">
+              <i class="glyphicon glyphicon-lamp" aria-hidden="true"></i>
+              <h3>{{extensions.dsc1}}</h3>
+              <h4>{{extensions.dsc2}}</h4>
+              <p>{{extensions.dsc3}}</p>
             </div>
           </div>
-        {{/foreach}}
+        </div>
+      </li>
+    {{/features}}
+    </ul>
+  </div>
+  <div class="clearfix"></div>
+</div>
+<!-- welcome -->
+<div class="about w3layouts-agileinfo" id="about">
+  <div class="container">
+    {{#features 'about'}}
+    <h3 class="top-about">夏安装饰</h3>
+    <div class="about-top w3ls-agile">
+      <div class="col-md-6 come">
+        <div class=" about-wel">
+          <h5>{{title}}</h5>
+          <p>{{extensions.introduction}}</p>
+            <ul>
+              {{#if extensions.superiority1}}
+              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok"></i>{{extensions.superiority1}}</a></li>
+              {{/if}}
+              {{#if extensions.superiority2}}
+              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok"></i>{{extensions.superiority2}}</a></li>
+              {{/if}}
+              {{#if extensions.superiority3}}
+              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok"></i>{{extensions.superiority3}}</a></li>
+              {{/if}}
+              {{#if extensions.superiority4}}
+              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok"></i>{{extensions.superiority4}}</a></li>
+              {{/if}}
+              {{#if extensions.superiority5}}
+              <li><a href="javascript:;"><i class="glyphicon glyphicon-ok"></i>{{extensions.superiority5}}</a></li>
+              {{/if}}
+            </ul>
+        </div>
       </div>
-    </div>
-    <div class="col-md-3 hidden-xs hidden-sm">
-      <div class="panel panel-default">
-        <div class="panel-heading">阅读总排行</div>
-        <ul class="list-group">
-          {{#foreach readingList.total limit="5"}}
-            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
-          {{/foreach}}
-        </ul>
+      {{/features}}
+      <div class="col-md-6 red">
+        <div class="about-img">
+          <div class="col-md-4 about-img1">
+            <i class="fa fa-bath w3l-fisrt" aria-hidden="true"></i>
+            <i class="fa fa-bed" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-4 about-img2">
+            <i class="glyphicon glyphicon-lamp w3l-fisrt" aria-hidden="true"></i>
+            <i class="fa fa-child" aria-hidden="true"></i>
+          </div>
+          <div class="col-md-4 about-img2">
+            <i class="fa fa-heart-o w3l-fisrt" aria-hidden="true"></i>
+            <i class="fa fa-laptop" aria-hidden="true"></i>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
       </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">阅读本月排行</div>
-        <ul class="list-group">
-          {{#foreach readingList.month limit="5"}}
-            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
-          {{/foreach}}
-        </ul>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">阅读本周排行</div>
-        <ul class="list-group">
-          {{#foreach readingList.week limit="5"}}
-            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
-          {{/foreach}}
-        </ul>
-      </div>
-      <div class="panel panel-default">
-        <div class="panel-heading">阅读今日排行</div>
-        <ul class="list-group">
-          {{#foreach readingList.day limit="5"}}
-            <a href="{{href}}" class="list-group-item text-overflow">{{title}}</a>
-          {{/foreach}}
-        </ul>
-      </div>
+      <div class="clearfix"> </div>
     </div>
   </div>
+</div>
+<!-- //welcome -->
+<!-- services -->
+<div class="services" id="services">
+  <div class="container">
+    <div class="w3layouts-services-heading">
+      <h3>我们的服务</h3>
+    </div>
+    <div class="w3-services-grids">
+      {{#features 'about'}}
+      <div class="col-md-4 w3l-services-grid">
+        <div class="w3ls-services-img">
+          <i class="fa {{extensions.icon}}" aria-hidden="true"></i>
+        </div>
+        <div class="agileits-services-info">
+          <h4>{{title}}</h4>
+          <p>{{extensions.introduction}}.</p>
+        </div>
+      </div>
+      {{/features}}
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- //services -->
+<!-- Special -->
+<div class="w3agile-spldishes">
+  <div class="container">
+    <h3 class="w3ls-title">专业订制</h3>
+    <div class="spldishes-agileinfo">
+      <div class="col-md-3 spldishes-w3left">
+        <h5 class="w3ltitle">展示出彩的设计理念</h5>
+        <p>Donec non nibh in dui sagittis finibus. Duis suscipit</p>
+      </div>
+      <div class="col-md-9 spldishes-grids">
+        <!-- Owl-Carousel -->
+        <div id="owl-demo" class="owl-carousel text-center agileinfo-gallery-row">
+          {{#features 'customize'}}
+          <a class="item g1">
+            <img class="lazyOwl" src="{{thumbnail.src}}" title="{{title}}" alt="{{title}}"/>
+            <div class="agile-dish-caption">
+              <h4>{{title}}</h4>
+              <span>{{extensions.introduction}}</span>
+            </div>
+          </a>
+          {{/features}}
+        </div>
+      </div>
+      <div class="clearfix"> </div>
+    </div>
+  </div>
+</div>
+<!-- //Special -->
+<!-- team -->
+<div id="team" class="team-content all_pad w3agile">
+  <div class="container">
+    <h3 class="title">我们的团队</h3>
+    <div class="t-content-gds">
+      {{#features 'team'}}
+      <div class="col-md-3 t-cont-gds wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+        <div class="team-img">
+          <img class="img-responsive" src="{{thumbnail.src}}" alt="{{extensions.name}}"/>
+          <div class="team-text">
+            <h4>{{extensions.name}}</h4>
+            <p>{{extensions.introduction}}</p>
+            <p>{{extensions.phone}}</p>
+          </div>
+        </div>
+      </div>
+      {{/features}}
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+<!-- //team -->
+<!-- Gallery -->
+<section class="portfolio-w3ls" id="gallery">
+  <div class="container">
+    <h3 class="slideanim">案例展示</h3>
+  </div>
+  <div id="portfoliowrap" class="slideanim">
+    <div class="portfolio-centered">
+      {{#features 'caseShow'}}
+      <div class="portfolio-item graphic-Designs">
+        <a href="{{thumbnail.src}}" class="thumbnail">
+          <img src="{{thumbnail.src}}" alt="{{title}}">
+        </a>
+      </div>
+      {{/features}}
+      <div class="clearfix"></div>
+    </div><!-- portfolio -->
+  </div>
+</section>
+<!-- //gallery -->
+<!-- testimonials -->
+<div class="testimonials">
+  <div class="container">
+    <h3 class="head head1">客户怎么说</h3>
+    <ul id="flexiselDemo1">
+      {{#features 'comment'}}
+      <li>
+        <div class="wthree_testimonials_grid_main">
+          <div class="wthree_testimonials_grid">
+            <h4>{{title}}</h4>
+            <p>{{extensions.introduction}}</p>
+            <div class="wthree_testimonials_grid_pos">
+              <img src="{{thumbnail.src}}" alt="{{extensions.name}}" class="img-responsive" />
+            </div>
+          </div>
+          <div class="wthree_testimonials_grid1">
+            <h5>{{extensions.name}}</h5>
+            <p>客户</p>
+          </div>
+        </div>
+      </li>
+      {{/features}}
+    </ul>
+  </div>
+</div>
+<!-- //testimonials -->
+<!-- contact -->
+<div class="contact_w3agile" id="contact">
+  <div class="container wow fadeInUp animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">
+    <h3 class="title-w3">联系我们</h3>
+
+    <form action="#" method="post">
+      <input type="text" placeholder="您的名字" name="Name" required="">
+      <input type="text" placeholder="您的电话" name="Phone" required="" style="margin-right:0;">
+      <textarea name="Message" placeholder="您的需求" required=""></textarea>
+      <div class="con-form text-center">
+        <input type="submit" value="提交">
+      </div>
+    </form>
+
+  </div>
+</div>
+<div class="footer w3ls">
+    <div class="footer-2 w3ls">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-top">
+                    <div class="col-md-4 ftr-grid fg2">
+                        {{#features 'contact'}}
+                        <h3>地址</h3>
+                        <div class="ftr-address">
+                            <div class="local">
+                                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            </div>
+                            <div class="ftr-text">
+                                <p>{{extensions.address}}</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="ftr-address">
+                            <div class="local">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="ftr-text">
+                                <p>{{extensions.phone}}</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="ftr-address">
+                            <div class="local">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="ftr-text">
+                                <p><a href="{{extensions.email}}">{{extensions.email}}</a></p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        {{/features}}
+                    </div>
+                    <div class="col-md-4 ftr-grid">
+                        <div class="logo-fo">
+                            <h2><a href="/">{{siteInfo.title}}</a></h2>
+                        </div>
+                    </div>
+                    <div class="col-md-4 w3l_header_left-2">
+                        <div class="w3ls-social-icons-2">
+                            <!-- <a class="facebook" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="twitter" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="pinterest" href="#"><i class="fa fa-google-plus"></i></a>
+                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                            <a class="tumblr" href="#"><i class="fa fa-tumblr"></i></a> -->
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyrights">
+        <p>Copyright &copy; 2017.{{siteInfo.title}} All rights reserved.</p>
+    </div>
 </div>
