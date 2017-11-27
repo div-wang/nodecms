@@ -19,7 +19,7 @@
   </div>
   <div class="clearfix"></div>
 </div>
-<!-- welcome -->
+<!-- about -->
 <div class="about w3layouts-agileinfo" id="about">
   <div class="container">
     {{#features 'about'}}
@@ -70,12 +70,12 @@
     </div>
   </div>
 </div>
-<!-- //welcome -->
+<!-- //about -->
 <!-- services -->
 <div class="services" id="services">
   <div class="container">
     <div class="w3layouts-services-heading">
-      <h3>我们的服务</h3>
+      <h3>服务流程</h3>
     </div>
     <div class="w3-services-grids">
       {{#features 'about'}}
@@ -94,14 +94,33 @@
   </div>
 </div>
 <!-- //services -->
-<!-- Special -->
-<div class="w3agile-spldishes">
+<!-- Gallery -->
+<section class="portfolio-w3ls" id="gallery">
   <div class="container">
-    <h3 class="w3ls-title">专业订制</h3>
+    <h3 class="slideanim">案例展示</h3>
+  </div>
+  <div id="portfoliowrap" class="slideanim">
+    <div class="portfolio-centered">
+      {{#features 'caseShow'}}
+      <div class="portfolio-item graphic-Designs">
+        <a href="{{thumbnail.src}}" class="thumbnail">
+          <img src="{{thumbnail.src}}" alt="{{title}}">
+        </a>
+      </div>
+      {{/features}}
+      <div class="clearfix"></div>
+    </div><!-- portfolio -->
+  </div>
+</section>
+<!-- //gallery -->
+<!-- Special -->
+<div class="w3agile-spldishes" id="wiki">
+  <div class="container">
+    <h3 class="w3ls-title">装修百科</h3>
     <div class="spldishes-agileinfo">
       <div class="col-md-3 spldishes-w3left">
-        <h5 class="w3ltitle">展示出彩的设计理念</h5>
-        <p>Donec non nibh in dui sagittis finibus. Duis suscipit</p>
+        <h5 class="w3ltitle">中国品牌装饰一体化服务商</h5>
+        <p>中国品牌装饰一体化服务商，拥有二十多年的专业设计经验，具备建筑装饰工程设计壹级资质。 为客户提供科学/个性/优美的空间设计作品，严格执行国家、行业工艺施工标准，不断创新施工工艺，成就公司国际化装饰水平！</p>
       </div>
       <div class="col-md-9 spldishes-grids">
         <!-- Owl-Carousel -->
@@ -122,47 +141,6 @@
   </div>
 </div>
 <!-- //Special -->
-<!-- team -->
-<div id="team" class="team-content all_pad w3agile">
-  <div class="container">
-    <h3 class="title">我们的团队</h3>
-    <div class="t-content-gds">
-      {{#features 'team'}}
-      <div class="col-md-3 t-cont-gds wow bounceInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-        <div class="team-img">
-          <img class="img-responsive" src="{{thumbnail.src}}" alt="{{extensions.name}}"/>
-          <div class="team-text">
-            <h4>{{extensions.name}}</h4>
-            <p>{{extensions.introduction}}</p>
-            <p>{{extensions.phone}}</p>
-          </div>
-        </div>
-      </div>
-      {{/features}}
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</div>
-<!-- //team -->
-<!-- Gallery -->
-<section class="portfolio-w3ls" id="gallery">
-  <div class="container">
-    <h3 class="slideanim">案例展示</h3>
-  </div>
-  <div id="portfoliowrap" class="slideanim">
-    <div class="portfolio-centered">
-      {{#features 'caseShow'}}
-      <div class="portfolio-item graphic-Designs">
-        <a href="{{thumbnail.src}}" class="thumbnail">
-          <img src="{{thumbnail.src}}" alt="{{title}}">
-        </a>
-      </div>
-      {{/features}}
-      <div class="clearfix"></div>
-    </div><!-- portfolio -->
-  </div>
-</section>
-<!-- //gallery -->
 <!-- testimonials -->
 <div class="testimonials">
   <div class="container">
