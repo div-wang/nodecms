@@ -38,7 +38,21 @@
                 <li class="menu__item"><a href="#gallery" class="scroll menu__link">案例展示</a></li>
                 <li class="menu__item"><a href="#services" class="scroll menu__link">服务流程</a></li>
                 <li class="menu__item"><a href="#wiki" class="scroll menu__link">装修百科</a></li>
-                <li class="menu__item"><a href="#gallery" class="scroll menu__link">关于我们</a></li>
+                <li class="menu__item dropdown">
+                  <a class="dropdown-toggle scroll menu__link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">关于我们<span class="caret"></span></a>
+                  {{!-- <a href="#gallery" class="scroll menu__link">关于我们</a> --}}
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="/news">企业动态</a>
+                    </li>
+                    <li>
+                      <a href="/about">联系我们</a>
+                    </li>
+                    <li>
+                      <a href="/job">人才招聘</a>
+                    </li>
+                  </ul>
+                </li>
               </ul>
             </nav>
           </div>
