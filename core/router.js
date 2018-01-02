@@ -50,6 +50,11 @@ module.exports = {
       all: 'account.check'
     },
 
+    // 反馈
+    '/feedback': {
+      post: 'feedback.save'
+    },
+
     /**
      * 数据
      */
@@ -204,5 +209,12 @@ module.exports = {
   '/:content*': { get: 'content' },
 
   // 错误页
-  '/*': { get: 'errors.notFound' }
+  '/*': { get: 'errors.notFound' },
+
+  '/ceshi': {
+    // 反馈
+    '/feedback': {
+      post: 'feedback.save'
+    }
+  }
 };

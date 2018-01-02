@@ -44,6 +44,45 @@
         <!-- Baneer-js -->
         <script src="/themes/{{siteInfo.theme}}/assets/js/responsiveslides.min.js"></script>
         <script>
+            let submited = false
+            $('.submitDemand').click(function () {
+                let $form = $('#form')
+                let $name = $form.find('input[name="name"]').val()
+                let $phone = $form.find('input[name="phone"]').val()
+                let $demand = $form.find('textarea[name="demand"]').val()
+                let regPhone = /^(13[0-9]|14[0-9]|15[0-9]|17[0-9]|18[0-9])\d{8}$/
+
+                if (!$name) {
+                    alert('名称不能为空')
+                } else if (!$phone || !regPhone.test($phone)) {
+                    alert('手机号不正确')
+                } else if (!$demand) {
+                    alert('需求不能为空')
+                } else {
+                    if (submited) return
+                    submited = true
+                    $.ajax({
+                        url: '/ceshi/feedback',
+                        type: 'POST',
+                        dataType: 'json',
+                        data: {
+                            name: $name,
+                            phone: $phone,
+                            demand: $demand
+                        }
+                    })
+                    .done(function(res) {
+                        alert('留言成功');
+                        submited = false
+                        $form.find('input').val('')
+                        $form.find('textarea').val('')
+                    })
+                    .fail(function(err) {
+                        alert('留言失败，可能是网络问题，请稍后再试');
+                        submited = false
+                    })
+                }
+            })
             $(function () {
                 $("#slider").responsiveSlides({
                     auto: true,

@@ -1258,7 +1258,7 @@ div#team {
 	-ms-transition:0.5s all;
 	resize:none;
 }
-.contact_w3agile form input[type="submit"] {
+.contact_w3agile form input.submitDemand {
     background: none;
     border: 2px solid #fff;
     padding: 10px 0;
@@ -1274,7 +1274,7 @@ div#team {
     -o-transition: 0.5s all;
     -ms-transition: 0.5s all;
 }
-.contact_w3agile form input[type="submit"]:hover,.contact_w3agile form input[type="text"]:hover,.contact_w3agile form input[type="email"]:hover,.contact_w3agile textarea:hover {
+.contact_w3agile form input.submitDemand:hover,.contact_w3agile form input[type="text"]:hover,.contact_w3agile form input[type="email"]:hover,.contact_w3agile textarea:hover {
     border: 2px solid #8e44ad;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
