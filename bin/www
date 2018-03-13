@@ -8,7 +8,6 @@ var logger = require('../lib/logger.lib');
 var port = require('../lib/port.lib.js')();
 var themes = require('../lib/themes.lib');
 var installService = require('../core/services/install.service');
-var config = require('./config/app');
 
 /**
  * 设置端口
