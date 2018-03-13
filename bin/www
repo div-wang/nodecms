@@ -8,6 +8,7 @@ var logger = require('../lib/logger.lib');
 var port = require('../lib/port.lib.js')();
 var themes = require('../lib/themes.lib');
 var installService = require('../core/services/install.service');
+var config = require('./config/app');
 
 /**
  * 设置端口
@@ -82,8 +83,8 @@ async.waterfall([
   });
   // 配置https服务
   var fs = require('fs');
-  var privateKey = fs.readFileSync('../feed/ssl/div.key.unsec', 'utf8');
-  var certificate = fs.readFileSync('../feed/ssl/div.crt', 'utf8');
+  var privateKey = fs.readFileSync('~/.ssh/div.key', 'utf8');
+  var certificate = fs.readFileSync('~/.ssh/div.cert', 'utf8');
   var credentials = {
       "key": privateKey,
       "cert": certificate
