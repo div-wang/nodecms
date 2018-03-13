@@ -62,7 +62,8 @@
   "main": "bin/www",
   "scripts": {
     "dev": "node ./bin/www -p 3010",
-    "start": "nohup node ./bin/www -p 3010 > start.log 2>&1 &"
+    "start": "nohup node ./bin/www -p 3010 > start.log 2>&1 &",
+    "build": "gulp build"
   },
   "bugs": {
     "url": "https://github.com/welkinwong/nodercms/issues"
